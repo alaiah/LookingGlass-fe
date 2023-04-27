@@ -1,0 +1,19 @@
+<div class="content">
+    <div fxLayout="row wrap" fxLayoutGap="16px grid">
+        <div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%"
+            *ngFor="let asessmentTemplate of (assessmentTemplates$ | async)">
+
+
+            <mat-card class="example-card">
+                <mat-card-header>
+                    <mat-card-title-group>
+                        <mat-card-title>{{ asessmentTemplate.name }}</mat-card-title>
+                    </mat-card-title-group>
+                </mat-card-header>
+                <mat-card-content>
+                    {{ asessmentTemplate.description }}
+                </mat-card-content>
+            </mat-card>
+        </div>
+    </div>
+</div>

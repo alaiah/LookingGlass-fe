@@ -1,0 +1,18 @@
+.example-card {
+    max-width: 300px;
+    min-height: 350px;
+    margin-bottom: 8px;
+}
+
+.content {
+    padding: 16px;
+}
+
+.content>mat-card {
+    margin-bottom: 16px;
+}
+
+.column-label {
+    margin-right: 8px;
+    font-size: 1rem;
+}

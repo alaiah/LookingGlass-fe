@@ -1,0 +1,27 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+        <button mat-icon-button>
+            <mat-icon>menu</mat-icon>
+        </button>
+        <span>LookingGlass</span>
+        <span class="menu-spacer"></span>
+        <div>
+            <a mat-button routerLinkActive="active-link" [routerLink]="'/home'"><mat-icon>home</mat-icon>Home </a>
+
+            <a mat-button *ngIf="(isAuthorized$ | async)" [routerLink]="'/students'"><mat-icon>school</mat-icon> Students </a>
+            <a mat-button *ngIf="(isAuthorized$ | async)" [routerLink]="'/assessments'"><mat-icon>quiz</mat-icon> Assessments </a>
+
+        </div>
+
+        <span class="flexExpand"></span>
+        <div>
+            <a mat-button *ngIf="!(isAuthorized$ | async)" [routerLink]="'/register'">Register</a>
+            <a mat-button *ngIf="!(isAuthorized$ | async)" [routerLink]="'/login'">Login</a>
+            <a mat-button *ngIf="(isAuthorized$ | async)" (click)="logout()" [routerLink]="'/home'">Logout</a>
+             
+        </div>
+
+
+    </mat-toolbar-row>
+
+</mat-toolbar>
